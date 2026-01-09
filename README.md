@@ -2,47 +2,46 @@
 
 This repository contains the DDx (Document-Driven Development eXperience) library of templates, patterns, prompts, and configurations for AI-assisted development.
 
-## Contents
+## Installation
 
-- **prompts/** - AI prompts and instructions for various development tasks
-- **templates/** - Project templates and boilerplates
-- **patterns/** - Reusable code patterns and solutions
-- **personas/** - AI personality definitions for consistent interactions
-- **mcp-servers/** - Model Context Protocol server configurations
-- **configs/** - Tool configurations (ESLint, Prettier, TypeScript, etc.)
-- **workflows/** - Complete development methodologies (HELIX, etc.)
-- **tools/** - Development tool integrations and scripts
-- **environments/** - Development environment configurations
+### Claude Code Plugin (Recommended)
 
-## Usage
+Install directly as a Claude Code plugin:
 
-This library is designed to be used with the [DDx CLI tool](https://github.com/easel/ddx). The CLI automatically syncs this library into your projects using git subtree for bidirectional synchronization.
+```bash
+/plugin install https://github.com/easel/ddx-library
+```
 
-### Installation via DDx CLI
+This gives you:
+- **Slash commands**: `/ddx:prd`, `/ddx:code-review`, `/ddx:commit-hooks`, `/ddx:github-actions`, `/ddx:docs`, `/ddx:gitignore`, `/ddx:create-workflow`
+- **HELIX skill**: Auto-invoked TDD workflow guidance during development
+- **Agents**: Systems architect, TDD test engineer, strict code reviewer
+
+### DDx CLI
+
+Alternatively, use the [DDx CLI tool](https://github.com/easel/ddx) for git subtree-based synchronization:
 
 ```bash
 # Install DDx CLI
 curl -fsSL https://raw.githubusercontent.com/easel/ddx/main/install.sh | bash
 
-# Initialize in your project (automatically pulls this library)
-cd your-project
+# Initialize in your project
 ddx init
 ```
 
-### Manual Usage
+## Contents
 
-You can also use git subtree directly to include this library in your projects:
-
-```bash
-# Add the library to your project
-git subtree add --prefix=.ddx https://github.com/easel/ddx-library main --squash
-
-# Update to latest library version
-git subtree pull --prefix=.ddx https://github.com/easel/ddx-library main --squash
-
-# Contribute improvements back
-git subtree push --prefix=.ddx https://github.com/easel/ddx-library main
-```
+- **commands/** - Claude Code slash commands
+- **skills/** - Auto-invoked Claude Code skills (HELIX workflow)
+- **agents/** - Specialized Claude Code agents
+- **prompts/** - AI prompts and instructions for various development tasks
+- **personas/** - AI personality definitions for consistent interactions
+- **mcp-servers/** - Model Context Protocol server configurations
+- **workflows/** - Complete development methodologies (HELIX, etc.)
+- **environments/** - Development environment configurations
+- **tools/** - Development tool integrations and scripts
+- **templates/** - Project templates and boilerplates
+- **patterns/** - Reusable code patterns and solutions
 
 ## Contributing
 
