@@ -13,7 +13,7 @@ Install as a Claude Code plugin in two steps:
 /plugin marketplace add easel/ddx-library
 
 # Install the plugin
-/plugin install library@ddx
+/plugin install ddx@ddx-library
 ```
 
 This gives you:

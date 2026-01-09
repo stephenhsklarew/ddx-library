@@ -1,5 +1,5 @@
 {
-  "name": "ddx",
+  "name": "ddx-library",
   "owner": {
     "name": "easel"
   },
@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "library",
+      "name": "ddx",
       "source": "./",
       "description": "Document-Driven Development eXperience - workflows, prompts, personas, and templates for AI-assisted development",
       "version": "1.0.0"
