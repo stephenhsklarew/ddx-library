@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "library",
-      "source": "..",
+      "source": "./",
       "description": "Document-Driven Development eXperience - workflows, prompts, personas, and templates for AI-assisted development",
       "version": "1.0.0"
     }
