@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "_comment": "DDx MCP Server configurations. Set required environment variables before enabling servers.",
+  "_documentation": "See mcp-servers/servers/*.yml for detailed setup instructions for each server.",
+  "mcpServers": {
+    "filesystem": {
+      "_comment": "Local filesystem access - enabled by default for project directory",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${CLAUDE_PLUGIN_ROOT}/../.."]
+    },
+    "github": {
+      "_comment": "GitHub integration - requires GITHUB_PERSONAL_ACCESS_TOKEN",
+      "_disabled": true,
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "sqlite": {
+      "_comment": "SQLite database access - requires SQLITE_DB_PATH",
+      "_disabled": true,
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sqlite", "${SQLITE_DB_PATH}"]
+    },
+    "postgres": {
+      "_comment": "PostgreSQL access - requires POSTGRES_CONNECTION_STRING",
+      "_disabled": true,
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "POSTGRES_CONNECTION_STRING": "${POSTGRES_CONNECTION_STRING}"
+      }
+    },
+    "sequential-thinking": {
+      "_comment": "Extended thinking for complex problem-solving",
+      "_disabled": true,
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "memory": {
+      "_comment": "Persistent memory using Mem0 - requires MEM0_API_KEY",
+      "_disabled": true,
+      "command": "npx",
+      "args": ["-y", "mem0-mcp"],
+      "env": {
+        "MEM0_API_KEY": "${MEM0_API_KEY}"
+      }
+    },
+    "playwright": {
+      "_comment": "Browser automation with Playwright",
+      "_disabled": true,
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp-server"]
+    },
+    "notion": {
+      "_comment": "Notion workspace integration - requires NOTION_API_KEY",
+      "_disabled": true,
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-notion"],
+      "env": {
+        "NOTION_API_KEY": "${NOTION_API_KEY}"
+      }
+    },
+    "slack": {
+      "_comment": "Slack integration - requires SLACK_BOT_TOKEN",
+      "_disabled": true,
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}"
+      }
+    }
+  }
+}
