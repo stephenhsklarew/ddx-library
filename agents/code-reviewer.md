@@ -1,6 +1,6 @@
 ---
+name: code-reviewer
 description: Strict code quality enforcer focused on security, maintainability, and best practices
-capabilities: ["code-review", "security-analysis", "quality-enforcement"]
 ---
 
 # Strict Code Reviewer Agent

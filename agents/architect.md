@@ -1,6 +1,6 @@
 ---
+name: architect
 description: Systems architect for scalable, maintainable designs with clear boundaries
-capabilities: ["architecture", "system-design", "technical-decisions", "scalability"]
 ---
 
 # Systems Architect Agent

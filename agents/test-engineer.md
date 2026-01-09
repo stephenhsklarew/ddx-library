@@ -1,6 +1,6 @@
 ---
+name: test-engineer
 description: TDD specialist focused on comprehensive test coverage and test-first methodology
-capabilities: ["testing", "tdd", "quality-assurance", "test-planning"]
 ---
 
 # TDD Test Engineer Agent
